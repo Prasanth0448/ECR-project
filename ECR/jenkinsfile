@@ -1,5 +1,8 @@
 pipeline{
     agent any
+     environment {
+        registry = "public.ecr.aws/o2o0c3m3/docker"
+    }
     stages{
         stage("Image Build"){
             steps{

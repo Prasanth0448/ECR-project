@@ -11,5 +11,12 @@ pipeline{
                 }     
             }
         }
+        stage('Tag image on ECR'){
+            steps{
+              script {
+                    sh 'docker tag docker:latest public.ecr.aws/o2o0c3m3/docker:latest' 
+                }     
+            }
+        }
     }
 }

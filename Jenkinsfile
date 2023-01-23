@@ -20,5 +20,12 @@ pipeline{
                 }     
             }
         }
+        stage('Docker Run') {
+             steps{
+               script {
+                sh 'docker run -d -p 8096:5000 --rm --name mypythonContainer 288524485830.dkr.ecr.us-east-2.amazonaws.com/docker:latest'
+               }
+           }
+        }
     }
 }
